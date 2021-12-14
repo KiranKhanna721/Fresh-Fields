@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-3">
+    <div class="header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Crop Recommadation</h1>
+    </div>
+    
+	<div class="p-3 pb-md-3 mx-auto col-8 text-center">
+		<form class="card p-2 " action="{{ url_for('predict')}}" method="post">
+			<input type="text" name="Nitrogen" placeholder="Nitrogen" required="required" />
+			<input type="text" name="Phosphorus" placeholder="Phosphorus" required="required" />
+            <input type="text" name="Potassium" placeholder="Potassium" required="required" />
+            <input type="text" name="Temperature" placeholder="Temperature" required="required" />
+            <input type="text" name="Humidity" placeholder="Humidity" required="required" />
+            <input type="text" name="PH" placeholder="PH" required="required" />
+            <input type="text" name="Rainfall" placeholder="Rainfall" required="required" />
+			<button type="submit" id='submit' name='submit' class="btn btn-secondary">Analyze</button>
+		</form>
+	</div>
+
+
+{% if predict %}
+	<div class="p-3 pb-md-3 mx-auto col-8 text-center">
+		<div class="col-md-5 col-lg-12 order-md-last mt-3">
+			<table class="table">
+			  <thead>
+				<tr>
+					<th scope="row">Prediction
+						<th scope="col">{{predict}}</th>
+					</th>
+				</tr>
+			  </thead>
+			</table>
+		</div>
+	</div>	
+{%endif%}
+</div>
+{% endblock %}
