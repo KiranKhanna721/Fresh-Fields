@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-3">
+    <div class="header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Fertilizer Prediction</h1>
+    </div>
+    
+	<div class="p-3 pb-md-3 mx-auto col-8 text-center">
+		<form class="card p-2 " action="{{ url_for('predict1')}}" method="post">
+            <input type="text" name="Temperature" placeholder="Temperature" required="required" />
+            <input type="text" name="Humidity" placeholder="Humidity" required="required" />
+            <input type="text" name="Moisture" placeholder="Moisture" required="required" />
+            <input type="text" name="SoilType" placeholder="SoilType" required="required" />
+            <input type="text" name="CropType" placeholder="CropType" required="required" />
+            <input type="text" name="Nitrogen" placeholder="Nitrogen" required="required" />
+			<input type="text" name="Phosphorus" placeholder="Phosphorus" required="required" />
+            <input type="text" name="Potassium" placeholder="Potassium" required="required" />
+			<button type="submit" id='submit' name='submit' class="btn btn-secondary">Analyze</button>
+		</form>
+	</div>
+
+
+{% if predict1 %}
+	<div class="p-3 pb-md-3 mx-auto col-8 text-center">
+		<div class="col-md-5 col-lg-12 order-md-last mt-3">
+			<table class="table">
+			  <thead>
+				<tr>
+					<th scope="row">Prediction
+						<th scope="col">{{predict1}}</th>
+					</th>
+				</tr>
+			  </thead>
+			</table>
+		</div>
+	</div>	
+{%endif%}
+</div>
+{% endblock %}
