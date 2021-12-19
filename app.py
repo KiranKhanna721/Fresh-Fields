@@ -94,7 +94,7 @@ def upload_image():
             Y_pred = model2.predict(opencv_image)
             result = CLASS_NAMES[np.argmax(Y_pred)]
             return render_template("/plant.html", uploaded_image="static/images/"+image.filename, label=result)
-    return render_template("/plant.html")
+    return render_template("/plant.html",uploaded_image=None,label=None)
 
 
 @app.route('/uploads/<filename>')
