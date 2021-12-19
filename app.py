@@ -9,11 +9,11 @@ from config import Config
 from keras.models import load_model
 app.config.from_object(Config)
 app = Flask(__name__)
-app.config["IMAGE_UPLOADS"] = "E:/DeepLearning'/Agriculture/static/images"
+#app.config["IMAGE_UPLOADS"] = "E:/DeepLearning'/Agriculture/static/images"
 model = pickle.load(open('model.pkl', 'rb'))
 model1 = pickle.load(open('model1.pkl', 'rb'))
-model2 = load_model('plant_disease.h5')
-CLASS_NAMES = ['Corn-Common_rust', 'Potato-Early_blight', 'Tomato-Bacterial_spot']
+# model2 = load_model('plant_disease.h5')
+# CLASS_NAMES = ['Corn-Common_rust', 'Potato-Early_blight', 'Tomato-Bacterial_spot']
 @app.route('/')
 def index():
     return render_template('/index.html')
@@ -81,26 +81,26 @@ def predict1():
             out = "Urea"
         return render_template('/fer.html',predict1='Fertilizer that should be used is : {}'.format(out))
     return render_template("/fer.html",predict1=None)
-*/
-@app.route('/upload-image', methods=['GET', 'POST'])
-def upload_image():
-    if request.method == "POST":
-        if request.files:
-            image = request.files["image"]
-            image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
-            image_p = PIL.Image.open(image)
-            file_bytes = np.asarray(image_p, dtype=np.uint8)
-            opencv_image = cv2.resize(file_bytes, (256,256))
-            opencv_image.shape = (1,256,256,3)
-            Y_pred = model2.predict(opencv_image)
-            result = CLASS_NAMES[np.argmax(Y_pred)]
-            return render_template("/plant.html", uploaded_image="static/images/"+image.filename, label=result)
-    return render_template("/plant.html",uploaded_image=None,label=None)
+
+# @app.route('/upload-image', methods=['GET', 'POST'])
+# def upload_image():
+   # if request.method == "POST":
+    #    if request.files:
+     #       image = request.files["image"]
+       #     image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
+       #     image_p = PIL.Image.open(image)
+        #    file_bytes = np.asarray(image_p, dtype=np.uint8)
+         #   opencv_image = cv2.resize(file_bytes, (256,256))
+        #    opencv_image.shape = (1,256,256,3)
+         #   Y_pred = model2.predict(opencv_image)
+         #   result = CLASS_NAMES[np.argmax(Y_pred)]
+         #   return render_template("/plant.html", uploaded_image="static/images/"+image.filename, label=result)
+  #  return render_template("/plant.html",uploaded_image=None,label=None)
 *\
 
-@app.route('/uploads/<filename>')
-def send_uploaded_file(filename=''):
-    return send_from_directory(app.config["IMAGE_UPLOADS"], filename)
+#@app.route('/uploads/<filename>')
+# def send_uploaded_file(filename=''):
+#    return send_from_directory(app.config["IMAGE_UPLOADS"], filename)
 
 if __name__ == '__main__':
     app.run()
