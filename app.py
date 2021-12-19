@@ -96,9 +96,9 @@ def predict1():
          #   result = CLASS_NAMES[np.argmax(Y_pred)]
          #   return render_template("/plant.html", uploaded_image="static/images/"+image.filename, label=result)
   #  return render_template("/plant.html",uploaded_image=None,label=None)
-*\
 
-#@app.route('/uploads/<filename>')
+
+# @app.route('/uploads/<filename>')
 # def send_uploaded_file(filename=''):
 #    return send_from_directory(app.config["IMAGE_UPLOADS"], filename)
 
