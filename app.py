@@ -81,7 +81,7 @@ def predict1():
             out = "Urea"
         return render_template('/fer.html',predict1='Fertilizer that should be used is : {}'.format(out))
     return render_template("/fer.html",predict1=None)
-
+*/
 @app.route('/upload-image', methods=['GET', 'POST'])
 def upload_image():
     if request.method == "POST":
@@ -96,7 +96,7 @@ def upload_image():
             result = CLASS_NAMES[np.argmax(Y_pred)]
             return render_template("/plant.html", uploaded_image="static/images/"+image.filename, label=result)
     return render_template("/plant.html",uploaded_image=None,label=None)
-
+*\
 
 @app.route('/uploads/<filename>')
 def send_uploaded_file(filename=''):
