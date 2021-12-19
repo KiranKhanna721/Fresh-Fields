@@ -102,4 +102,4 @@ def send_uploaded_file(filename=''):
     return send_from_directory(app.config["IMAGE_UPLOADS"], filename)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
