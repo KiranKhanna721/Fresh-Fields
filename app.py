@@ -3,8 +3,8 @@ import numpy as np
 import pickle
 import os
 from config import Config
-app.config.from_object(Config)
 app = Flask(__name__)
+app.config.from_object(Config)
 model = pickle.load(open('model.pkl', 'rb'))
 model1 = pickle.load(open('model1.pkl', 'rb'))
 @app.route('/')
