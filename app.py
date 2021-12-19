@@ -5,8 +5,9 @@ import pickle
 import os
 import PIL 
 import cv2
+from config import Config
 from keras.models import load_model
-
+app.config.from_object(Config)
 app = Flask(__name__)
 app.config["IMAGE_UPLOADS"] = "E:/DeepLearning'/Agriculture/static/images"
 model = pickle.load(open('model.pkl', 'rb'))
