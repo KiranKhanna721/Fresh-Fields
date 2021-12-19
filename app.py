@@ -39,7 +39,7 @@ def predict():
         prediction = model.predict(arr)
         #output = round(prediction[0], 2)
         return render_template('/crop.html',predict='Crop that should be grown {}'.format(prediction))
-    return render_template("/crop.html",predict=None)
+    return render_template('/crop.html',predict=None)
 
 @app.route('/predict1', methods=["GET", "POST"])
 def predict1():
