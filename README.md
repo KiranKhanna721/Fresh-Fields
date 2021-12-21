@@ -1,5 +1,9 @@
 # Fresh-Fields
 
+## To run website for farming which is known as fresh fields website
+```sh
+python app.py
+```
 ## To run dasha farming assistant
 ```sh
 cd farming
