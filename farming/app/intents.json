@@ -1,0 +1,253 @@
+{
+  "version": "v2",
+  "intents": 
+  {
+    "yes": 
+    {
+      "includes": [
+        "yes",
+        "correct",
+        "sure",
+        "absolutely",
+        "yes siree bob",
+        "right",
+        "yep",
+        "you got it",
+        "I would",
+        "yeah", 
+        "I would",
+        "yes that's correct",
+        "yes, that's right",
+        "right",
+        "sure thing",
+        "totally right",
+        "that's right",
+        "see",
+        "totally",
+        "uh huh",
+        "uh-huh"
+      ],
+      "excludes": [
+        "fuck off"
+      ]
+    },
+    "no": {
+      "includes": [
+        "no",
+        "definitely not",
+        "none of such",
+        "none of the kind",
+        "nothing like that",
+        "not interested",
+        "none of that",
+        "wrong",
+        "incorrect",
+        "I do not",
+        "I don't",
+        "I would not",
+        "I wouldn't",
+        "nope",
+        "nah",
+        "incorrect",
+        "wrong",
+        "I'm okay",
+        "that's not right",
+        "that's wrong",
+        "I don't think so",
+        "I doubt that",
+        "I didn't have any contact",
+        "haven't been in contact",
+        "no plans",
+        "no plan",
+        "not planning",
+        "not"
+      ]
+    },
+
+    "question": {
+      "includes": [
+        "I actually have a question",
+        "I have a question but I'm not sure who to ask",
+        "I have a question but I'm not sure you can answer it",
+        "I have a question",
+        "I've got a question",
+        "I actually have a question but I'm not quite sure you're the person to ask",
+        "I have a bunch of question",
+        "I have lots of questions",
+        "How much I can borrow money",
+        "money"
+      ]
+    },
+
+    "maybe": {
+      "includes": [
+        "I'm not sure",
+        "I'm usure",
+        "I do not know",
+        "I don't know for sure",
+        "unsure",
+        "not sure",
+        "I'm not quite sure",
+        "unsure what I want",
+        "could be",
+        "maybe",
+        "perhaps",
+        "perhaps I have",
+        "maybe I have",
+        "maybe I have, I'm not sure",
+        "I'm not quite sure",
+        "could be so",
+        "potentially",
+        "very likely",
+        "think so"
+      ],
+      "excludes": [
+        "sure",
+        "unlikely",
+        "couldn't be",
+        "don't think so"
+      ]
+    },
+
+    "farming":
+    {
+      "includes":[
+        "I am facing issues",
+        "issue",
+        "difficuites",
+        "got a problem",
+        "not able to grow healthy crops",
+        "help",
+        "lack of knowledge",
+        "not able to buy seeds",
+        "not able grow to grow crop",
+        "not growing"
+      ],
+      "excludes":[
+        "healthy growing",
+        "not yet",
+        "not sure"
+      ]
+    },
+
+    "technical":
+    {
+      "includes":[
+        "Don't know ,how to grow",
+        "lack of knowledge",
+        "basics",
+        "lack of basics",
+        "technical",
+        "not able to understand technical",
+        "not able to grow crops"
+      ],
+      "excludes": [
+        "no technical technology",
+        "no technical ",
+        "financial",
+        "financial issue",
+        "plenty of knowledge",
+        "no money",
+        "not able to buy seeds",
+        "pay",
+        "borrow",
+        "loan"
+      ]
+    },
+
+    "financial":
+    {
+      "includes":[
+        "financial",
+        "pay",
+        "money",
+        "not able to buy seeds",
+        "buy",
+        "borrow",
+        "not able to eat",
+        "no enough money"
+      ]
+    },
+
+
+    "bye": {
+      "includes": [
+        "bye",
+        "good bye",
+        "thanks bye",
+        "nevermind",
+        "forget about it",
+        "we're done",
+        "take it easy",
+        "peace out boo",
+        "peace"
+      ]
+    },
+
+    "payment": {
+      "includes":[
+        "will I be paid",
+        "what about interest",
+        "borrow",
+        "payment",
+        "pay",
+        "going to be paid",
+        "am I going to be paid",
+        "paid or unpaid",
+        "unpaid or paid",
+        "paid or not",
+        "any payment",
+        "reimbursed",
+        "reimbursement",
+        "will I be reimbursed",
+        "will I get anything",
+        "payment wise",
+        "money wise",
+        "cash wise",
+        "will I get any cash",
+        "what about my pay",
+        "what about my salary",
+        "get cash",
+        "get money",
+        "get reimbursed",
+        "any payment for it",
+        "loan",
+        "borrow"
+      ]
+    }
+
+    
+  },
+ 
+  "entities": 
+  {
+    "name":
+   {
+     "open_set": true,
+     "values": [
+       {
+         "value": "Jim Smith",
+         "synonyms": ["Jim Smith"]
+       },
+       {
+         "value": "Tony Montana",
+         "synonyms": ["Tony Montana"]
+       },
+       {
+         "value": "Jill Jones",
+         "synonyms": ["Jill Jones"]
+       }
+     ],
+     "includes": [
+       "My name is (Tony Montana)[name]",
+       "My name is (Jill Jones)[name]",
+       "This is (Jim Smith)[name]",
+       "(Jim Smith)[name] calling",
+       "(Jill Jones)[name]",
+       "I'm (Tony Montana)[name]",
+       "(Tony Montana)[name]"
+     ]
+   }
+    
+  }
+}

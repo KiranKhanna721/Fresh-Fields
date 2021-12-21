@@ -1,0 +1,187 @@
+####################################################################################################
+ai: Hi, this is Dasha calling to know about farming. Is it a good time to talk?
+ai: Can you say your name?
+[
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "positive",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "59f41497facfec431e78341bfd951754:v2",
+    "weight": 0.99219,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "yes",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: yes
+ai: Perfect. Now,are you facing any diffcuities while farming ?
+[
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "positive",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "59f41497facfec431e78341bfd951754:v2",
+    "weight": 0.99219,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "yes",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: yes
+ai: Do you need technical help or financial help?
+[
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "neutral",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "59f41497facfec431e78341bfd951754:v2",
+    "weight": 0.97335,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "technical",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: technical
+ai: Got that.It is your first time when you are farming?
+[
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "positive",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "59f41497facfec431e78341bfd951754:v2",
+    "weight": 0.99219,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "yes",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: yes
+ai: The main steps for agricultural practices include preparation of soil, sowing, adding manure and fertilizers, irrigation, harvesting and storage
+ai: Do you want to know about how to select the crop or fertilizers for a particular soil ?
+[
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "positive",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "59f41497facfec431e78341bfd951754:v2",
+    "weight": 0.99219,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "yes",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: yes
+ai: Perfect, I'm glad to hear that!
+ai: Precision agriculture is a modern farming technique that uses research data of soil characteristics, soil types, crop yield data collection and suggests the farmers the right crop based on their site-specific parameters.
+ai: The fertilizer recommendation are made to apply enough fertilizers to both meet the nutrient requirements of the crop and to build up the nutrient level in the soil to a critical soil test level over a planned timeframe.
+ai: woud you like to visit our website where we can recommended crops and fertilizers based on some parameters ?
+[
+  {
+    "type": "Intent",
+    "skill": "sentiment",
+    "weight": -1,
+    "likelihood": -1,
+    "location": {
+      "start": 0,
+      "end": 0
+    },
+    "intent": null,
+    "state": "positive",
+    "sentenceType": "statement"
+  },
+  {
+    "type": "Intent",
+    "skill": "59f41497facfec431e78341bfd951754:v2",
+    "weight": 0.99361,
+    "likelihood": 1,
+    "location": {
+      "start": -1,
+      "end": -1
+    },
+    "intent": "yes",
+    "state": "positive",
+    "sentenceType": "statement"
+  }
+]
+human: Yes.
+ai: https://fresh-fields.herokuapp.com/
